@@ -1,0 +1,48 @@
+button {
+    padding: 12px 20px;
+    background-color: #1d05f9;
+    color: rgb(8, 246, 40);
+    border: 3px solid #e50518;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(239, 3, 208, 0.3) 10%, transparent 50%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  button:hover::before {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  
+  button:hover {
+    background-color: #fa6e0a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(86, 241, 3, 0.2);
+  }
+  
+  button span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  

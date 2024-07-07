@@ -1,0 +1,41 @@
+.text-field-container {
+    margin-bottom: 15px; 
+  }
+  
+  .text-field-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #f10a0a; 
+  }
+  
+  .text-field-container input {
+    width: 100%;
+    padding: 10px; 
+    box-sizing: border-box;
+    border: 10px solid #09abf6;
+    border-radius: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s, color 0.3s, background-color 0.3s;
+  }
+  
+  .text-field-container input:hover {
+    border-color: #4309f1;
+    box-shadow: 0 0 12px rgba(3, 194, 247, 0.8); 
+    background-color: #03f61b; 
+    color: #3f09f1;
+  }
+  
+  .text-field-container input::placeholder {
+    color: #fa0505;
+    transition: color 0.3s;
+  }
+  
+  .text-field-container input:hover::placeholder {
+    color: #0d09f1; 
+  }
+  
+  .text-field-container p {
+    color: rgb(10, 14, 248);
+    margin: 5px 0 0;
+  }
+  
