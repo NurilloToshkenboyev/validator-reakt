@@ -1,3 +1,4 @@
+/* App.css */
 body {
   font-family: Arial, sans-serif;
   background-image: url(https://i.pinimg.com/originals/79/4b/de/794bde7d505212b6c1790a63103289df.jpg);
@@ -7,8 +8,8 @@ form {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  border: 15px solid #05f539;
-  border-radius: 10px;
-  background-color: #f8f9fa; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border: 1px solid #05f539;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

@@ -1,3 +1,4 @@
+// PasswordField.jsx
 import React, { useState } from 'react';
 import './PasswordField.css';
 
@@ -11,10 +12,7 @@ const PasswordField = ({ error, ...rest }) => {
         placeholder="Parol"
         {...rest}
       />
-      <button
-        type="button"
-        onClick={() => setShowPassword(!showPassword)}
-      >
+      <button type="button" onClick={() => setShowPassword(!showPassword)}>
         {showPassword ? 'Hide' : 'Show'}
       </button>
       {error && <p>{error.message}</p>}

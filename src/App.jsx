@@ -1,3 +1,4 @@
+// App.jsx
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -7,7 +8,7 @@ import TextField from './components/LabelField/TextField';
 import PasswordField from './components/PasswordField/PasswordField';
 import SubmitButton from './components/SubmitButton/SubmitButton';
 
-const project = yup.object().shape({
+const schema = yup.object().shape({
   familia: yup.string().required("Familia majburiy"),
   name: yup.string().required("Ism majburiy"),
   email: yup.string().email("Email noto'g'ri").required("Email majburiy"),
@@ -16,7 +17,7 @@ const project = yup.object().shape({
 
 const App = () => {
   const { register, handleSubmit, formState: { errors } } = useForm({
-    resolver: yupResolver(project),
+    resolver: yupResolver(schema),
   });
 
   const onSubmit = (data) => {
@@ -25,7 +26,7 @@ const App = () => {
       familia: data.familia.charAt(0).toUpperCase() + data.familia.slice(1),
       name: data.name.charAt(0).toUpperCase() + data.name.slice(1),
     };
-    console.log(formattedData);
+    console.log('Submitted Data:', formattedData);
   };
 
   return (
@@ -55,17 +56,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
